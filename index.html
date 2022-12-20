@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. FRAGILE</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('4ebd5215e861a3ca7aff5192021c9aa6');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'Invitation:<◼(Rectangle)>',
+        description: 'FRAGILE RELAY EXHIBITION #3 <◼(Rectangle)>,
+        imageUrl:
+          'https://cdn.imweb.me/thumbnail/20221220/5f267a2fb4e67.png',
+        link: {
+          mobileWebUrl: 'https://fragile3.com/200',
+          webUrl: 'https://fragile3.com/200',
+        },
+      },
+     
+      buttons: [
+        {
+          title: 'See More',
+          link: {
+            mobileWebUrl: 'https://fragile3.com/200',
+            webUrl: 'https://fragile3.com/200',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
